@@ -27,7 +27,7 @@ public class UsuarioModel {
 
     @NotBlank(message = "Senha não informada") // Dado não pode ficar nulo no Banco de Dados
     @Size(min = 9)//mínimo 9 caracteres no Banco de Dados
-    @Pattern(regexp = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{9,13}$", message = "Ao menos um dígito")
+    @Pattern(regexp = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).(?=.*[!@#$%^&*()-+]){9,13}$", message = "Ao menos um dígito")
     //Validação de caractéres com expressão regular
 
     private String senha;
