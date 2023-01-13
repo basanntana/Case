@@ -21,14 +21,14 @@ public class UsuarioModel {
     @Size(min = 5, max = 100, message = "O atributo nome deve conter no mínimo 05 e no máximo 100 caracteres")
     private String nome;
 
-    @Email(message = "E-mail inválido")//Validação de email com anotação
+    @Email(message = "E-mail inválido")
     @NotBlank(message = "E-mail não informado")
     private String usuario;
 
-    @NotBlank(message = "Senha não informada") // Dado não pode ficar nulo no Banco de Dados
-    @Size(min = 9)//mínimo 9 caracteres no Banco de Dados
+    @NotBlank(message = "Senha não informada")
+    @Size(min = 9)
     @Pattern(regexp = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).(?=.*[!@#$%^&*()-+]){9,13}$", message = "Ao menos um dígito")
-    //Validação de caractéres com expressão regular
+
 
     private String senha;
 
